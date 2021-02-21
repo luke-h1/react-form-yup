@@ -19,6 +19,7 @@ function Form() {
 
   const submitForm = (data) => {
     console.log(data);
+    // make post request to API here...
   };
   return (
     <div className="Form">
