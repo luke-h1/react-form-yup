@@ -4,9 +4,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({
-  firstName: yup.string().required('First Name should be required please'),
-  lastName: yup.string().required(),
-  email: yup.string().email().required(),
+  firstName: yup.string().required('First Name is required'),
+  lastName: yup.string().required('Last Name is required'),
+  email: yup.string().email().required('Email is required'),
   age: yup.number().positive().integer().required(),
   password: yup.string().min(4).max(15).required(),
   confirmPassword: yup.string().oneOf([yup.ref('password'), null]),
